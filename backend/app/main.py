@@ -1,12 +1,13 @@
 from fastapi import FastAPI
+from app.db.database import engine
 
 app = FastAPI(
-    title="Tech With Thoufiq API",
-    version="1.0.0"
+    title="Tech With Thoufiq API"
 )
+
 
 @app.get("/")
 def root():
     return {
-        "message": "Welcome to Tech With Thoufiq API 🚀"
+        "message": "Database Connected Successfully!"
     }
